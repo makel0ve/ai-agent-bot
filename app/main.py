@@ -24,7 +24,7 @@ async def lifespan(app: FastAPI):
         await bot.set_webhook(
             url=f"{settings.webhook_url}/webhook/{settings.telegram_token.get_secret_value()}"
         )
-    
+
     else:
         polling_task = asyncio.create_task(dp.start_polling(bot))
 
@@ -32,7 +32,7 @@ async def lifespan(app: FastAPI):
 
     if settings.webhook_url:
         await bot.delete_webhook()
-    
+
     else:
         polling_task.cancel()
 
