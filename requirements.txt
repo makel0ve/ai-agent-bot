@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+pydantic-settings
+sqlalchemy
+asyncpg
+alembic
+greenlet
+aiogram
+httpx
+tenacity
+redis[hiredis]
+ddgs
+gunicorn

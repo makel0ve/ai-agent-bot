@@ -1,0 +1,157 @@
+[
+  {
+    "input": "Привет!",
+    "expected_tool": null,
+    "type": "no_tool"
+  },
+  {
+    "input": "Как дела?",
+    "expected_tool": null,
+    "type": "no_tool"
+  },
+  {
+    "input": "Что такое машинное обучение?",
+    "expected_tool": null,
+    "type": "no_tool"
+  },
+  {
+    "input": "Объясни что такое нейронная сеть",
+    "expected_tool": null,
+    "type": "no_tool"
+  },
+  {
+    "input": "Кто ты?",
+    "expected_tool": null,
+    "type": "no_tool"
+  },
+  {
+    "input": "Напиши короткое стихотворение про осень",
+    "expected_tool": null,
+    "type": "no_tool"
+  },
+  {
+    "input": "Что такое ВВП?",
+    "expected_tool": null,
+    "type": "no_tool"
+  },
+  {
+    "input": "Какая погода в Москве?",
+    "expected_tool": "get_weather",
+    "expected_args_contain": {"city": "Москва"},
+    "type": "single_tool"
+  },
+  {
+    "input": "Какая погода сейчас в Санкт-Петербурге?",
+    "expected_tool": "get_weather",
+    "expected_args_contain": {"city": "Санкт-Петербург"},
+    "type": "single_tool"
+  },
+  {
+    "input": "Скажи погоду в Новосибирске",
+    "expected_tool": "get_weather",
+    "expected_args_contain": {"city": "Новосибирск"},
+    "type": "single_tool"
+  },
+  {
+    "input": "Сколько стоит 100 долларов в рублях?",
+    "expected_tool": "convert_currency",
+    "expected_args_contain": {"from_currency": "USD", "to_currency": "RUB"},
+    "type": "single_tool"
+  },
+  {
+    "input": "Переведи 500 евро в рубли",
+    "expected_tool": "convert_currency",
+    "expected_args_contain": {"from_currency": "EUR", "to_currency": "RUB"},
+    "type": "single_tool"
+  },
+  {
+    "input": "Сколько будет 1000 рублей в долларах?",
+    "expected_tool": "convert_currency",
+    "expected_args_contain": {"from_currency": "RUB", "to_currency": "USD"},
+    "type": "single_tool"
+  },
+  {
+    "input": "Переведи 200 фунтов в евро",
+    "expected_tool": "convert_currency",
+    "expected_args_contain": {"from_currency": "GBP", "to_currency": "EUR"},
+    "type": "single_tool"
+  },
+  {
+    "input": "Найди последние новости про искусственный интеллект",
+    "expected_tool": "web_search",
+    "expected_args_contain": {"query": "искусственный интеллект"},
+    "type": "single_tool"
+  },
+  {
+    "input": "Найди информацию про Python 3.13",
+    "expected_tool": "web_search",
+    "expected_args_contain": {"query": "Python 3.13"},
+    "type": "single_tool"
+  },
+  {
+    "input": "Поищи рецепт борща",
+    "expected_tool": "web_search",
+    "expected_args_contain": {"query": "рецепт борща"},
+    "type": "single_tool"
+  },
+  {
+    "input": "Запомни: купить молоко",
+    "expected_tool": "create_note",
+    "expected_args_contain": {"content": "купить молоко"},
+    "type": "single_tool"
+  },
+  {
+    "input": "Сохрани заметку: позвонить врачу завтра в 10:00",
+    "expected_tool": "create_note",
+    "expected_args_contain": {"content": "позвонить врачу"},
+    "type": "single_tool"
+  },
+  {
+    "input": "Покажи мои заметки",
+    "expected_tool": "list_notes",
+    "expected_args_contain": {},
+    "type": "single_tool"
+  },
+  {
+    "input": "Удали заметку с заголовком купить молоко",
+    "expected_tool": "delete_note",
+    "expected_args_contain": {"title": "купить молоко"},
+    "type": "single_tool"
+  },
+  {
+    "input": "Какая погода в Лондоне и сколько будет 100 фунтов в рублях?",
+    "expected_tool": "get_weather",
+    "expected_args_contain": {"city": "Лондон"},
+    "type": "multi_step"
+  },
+  {
+    "input": "Найди курс биткоина и переведи 1 BTC в рубли",
+    "expected_tool": "web_search",
+    "expected_args_contain": {"query": "курс биткоина"},
+    "type": "multi_step"
+  },
+  {
+    "input": "Найди новости про Tesla и сохрани краткое резюме в заметки",
+    "expected_tool": "web_search",
+    "expected_args_contain": {"query": "Tesla"},
+    "type": "multi_step"
+  },
+  {
+    "input": "Сколько стоит iPhone 16 в долларах и переведи в рубли",
+    "expected_tool": "web_search",
+    "expected_args_contain": {"query": "iPhone 16 цена"},
+    "type": "multi_step"
+  },
+  {
+    "input": "Погода в Париже и сколько стоит 200 евро в рублях?",
+    "expected_tool": "get_weather",
+    "expected_args_contain": {"city": "Париж"},
+    "type": "multi_step"
+  },
+  {
+    "input": "Найди топ новости дня и запомни их в заметку",
+    "expected_tool": "web_search",
+    "expected_args_contain": {"query": "топ новости"},
+    "type": "multi_step"
+  }
+]
