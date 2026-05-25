@@ -61,5 +61,5 @@ def mock_llm_with_tool_call(mock_llm):
         ]
     )
     mock_llm.chat_stream.return_value = stream()
-    
+
     return mock_llm

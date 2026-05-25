@@ -39,7 +39,7 @@ def make_response(status_code: int, json_data: dict):
 
     else:
         resp.raise_for_status.return_value = None
-        
+
     return resp
 
 

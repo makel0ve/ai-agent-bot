@@ -15,7 +15,7 @@ def make_mock_history(monkeypatch):
             {"role": "user", "content": user_message}
         ],
     )
-    
+
     return mock_save
 
 
