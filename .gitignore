@@ -12,6 +12,7 @@ build/
 venv/
 .env
 .env.prod
+.env.test
 .idea/
 .vscode/
 *.swp

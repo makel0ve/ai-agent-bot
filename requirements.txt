@@ -11,3 +11,7 @@ tenacity
 redis[hiredis]
 ddgs
 gunicorn
+pytest
+pytest-asyncio
+pytest-dotenv
+ruff
